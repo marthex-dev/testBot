@@ -3,6 +3,7 @@
 import BotCard from '@/components/BotCard'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { bots } from '@/data/bots'
 
 export default function BotsPage() {
   const [botCount, setBotCount] = useState(12)
@@ -16,41 +17,6 @@ export default function BotsPage() {
     return () => clearInterval(interval)
   }, [])
 
-  const bots = [
-    {
-      id: 1,
-      name: "Kayıt Botu",
-      description: "Discord'a gelen üyelerinizi kayıt etmenizi sağlar!",
-      image: "/bots/bot.png",
-      features: [
-        "Kullanıcı kayıt işlemlerini otomatikleştirir.",
-        "Kullanıcı rollerini otomatik olarak atar.",
-        "Kayıt sırasında kullanıcı bilgilerini toplar.",
-      ]
-    },
-    {
-      id: 2,
-      name: "Moderasyon Botu",
-      description: "Sunucunuzu güvenle yönetmenizi sağlayan gelişmiş moderasyon botu!",
-      image: "/bots/moderation-bot.png",
-      features: [
-        "Otomatik spam koruması",
-        "Küfür ve hakaret filtreleme",
-        "Toplu mesaj silme",
-      ]
-    },
-    {
-      id: 3,
-      name: "Eğlence Botu",
-      description: "Sunucunuza eğlence katacak birbirinden farklı komutlar!",
-      image: "/bots/fun-bot.png",
-      features: [
-        "Müzik çalma özelliği",
-        "Mini oyunlar",
-        "Meme komutları",
-      ]
-    }
-  ]
 
   return (
     <main className="bg-[#1a1a1a]">
